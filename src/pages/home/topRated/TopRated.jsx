@@ -22,7 +22,7 @@ const TopRated = () => {
     }
     useEffect(()=>{
         getData()
-    },[])
+    },[endpoint])
     const onTabChange = (tab) => {
         setEndpoint(tab === "Movies" ? "movie" : "tv")
     }

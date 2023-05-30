@@ -22,7 +22,7 @@ const Trending = () => {
     }
     useEffect(()=>{
         getData()
-    },[])
+    },[endpoint])
     const onTabChange = (tab) => {
         setEndpoint(tab === "Day" ? "day" : "week")
     }
