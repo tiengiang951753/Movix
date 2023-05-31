@@ -53,7 +53,7 @@ const Explore = () => {
   const getData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`/discover/${mediaType}`, filters);
+      const response = await axios.get(`/discover/${mediaType}`, { params: filters });
       console.log(response);
       setData(response);
       setPageNum((prev) => prev + 1);
@@ -69,7 +69,7 @@ const Explore = () => {
       setLoading(true);
       const response = await axios.get(
         `/discover/${mediaType}?page=${pageNum}`,
-        filters
+        { params: filters }
       );
       setPageNum((prev) => prev + 1);
       if (data?.results) {
