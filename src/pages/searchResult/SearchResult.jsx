@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import { useState, useEffect } from "react";
-import noResults from "../../assets/no-results.png";
+// import noResults from "../../assets/no-results.png";
 import MovieCard from "../../components/movieCard/MovieCard";
 import axios from "axios";
 import Spinner from "../../components/spinner/Spinner";
@@ -38,6 +38,7 @@ const SearchResult = () => {
       if (data?.results) {
         setData({
           ...data,
+          // eslint-disable-next-line no-unsafe-optional-chaining
           results: [...data?.results, ...response.results],
         });
       } else {
