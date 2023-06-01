@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
 import SwitchTabs from '../../../components/switchTabs/SwitchTabs';
-import Carousel from '../../../components/carousel/carousel';
+import Carousel from '../../../components/carousel/Carousel';
 import axios from 'axios';
 
 const Popular = () => {
@@ -32,7 +32,7 @@ const Popular = () => {
     return (
         <div className='carouselSection'>
             <ContentWrapper>
-                <span className="carouselTitle">What's Popular</span>
+                <span className="carouselTitle">What&apos;s Popular</span>
                 <SwitchTabs
                     data={["Movies", "TV Shows"]}
                     onTabChange={onTabChange}
