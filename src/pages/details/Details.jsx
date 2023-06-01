@@ -5,6 +5,8 @@ import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Recommendation from "./carousels/Recommendation";
+import Similar from "./carousels/Similar";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -49,6 +51,8 @@ const Details = () => {
       <DetailsBanner video={videos?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={loadingCredits} />
       <VideosSection data={videos} loading={loadingVideos} />
+      <Similar mediaType={mediaType} id={id}/>
+      <Recommendation mediaType={mediaType} id={id}/>
     </div>
   );
 };
